@@ -1,0 +1,7 @@
+{
+  "name": "narwin-pack",
+  "private": true,
+  "dependencies": {
+    "slide-deck": "philipwalton/slide-deck#0.3.0"
+  }
+}
