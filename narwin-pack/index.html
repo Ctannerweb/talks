@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PostCSS and why narwin-pack was built (Dec. 4, 2015)</title>
+
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="bower_components/slide-deck/a-slide-deck.html">
+  <link rel="import" href="bower_components/slide-deck/a-slide.html">
+  <link rel="import" href="bower_components/slide-deck/code-block.html">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+  <a-slide-deck width="1024" height="768">
+
+    <a-slide>
+      <hgroup>
+        <h1>narwin-pack</h1>
+        <h2>And why we built a PostCSS package</h2>
+      </hgroup>
+      <p>
+        <a href="https://dockyard.com/" target="_blank">Cory Tanner</a> /
+        <a href="https://twitter.com/Ctannerweb" target="_blank">@ctannerweb</a> /
+        <a href="https://twitter.com/dockyard" target="_blank">@dockyard</a>
+      </p>
+    </a-slide>
+
+    <a-slide>
+      <h2>Why PostCSS?</h2>
+      <ul>
+        <li part>Main reason is the ability to pick and choose plugins you want to use</li>
+        <li part>You can set PostCSS up to act like Sass</li>
+        <li part>Is modular so the preprocessor is 3-30 times faster</li>
+        <li part>Create custom Plugin Packs that you can easily use for work like we did with narwin-pack</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>PostCSS Plugins</h2>
+      <ul>
+        <li part>Take normal css and modifies it based on the rules in the plugin</li>
+        <li part>You can write plugins yourself</li>
+        <li part>Dont expect one plugin to solve every need</li>
+        <li part>The beauty with plugins is that there will always be new plugins that solve new problems</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>PostCSS Packs</h2>
+      <ul>
+        <li part>A collection of plugins that solve a bigger issue</li>
+        <li part><a href="http://cssnext.io/" target="_blank">cssnext</a> allows you to use tomorrow's CSS syntax now</li>
+        <li part><a href="https://github.com/ctannerweb/talks/narwin-pack" target="_blank">narwin-pack</a> are hand picked plugins that meet the needs of Dockyards UX development process</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>narwin-pack Plugins</h2>
+      <ul>
+        <li>autoprefixer</li>
+        <li>postcss-partial-import</li>
+        <li>postcss-nested</li>
+        <li>postcss-custom-properties</li>
+        <li>postcss-calc</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>autoprefixer</h2>
+      <ul>
+        <li part>Based on <a href="http://caniuse.com" target="_blank">caniuse</a> rules and the plugin will auto add the needed prefix of a style</li>
+        <li part>Very helpfull with transforms and transitions</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+     <h2>postcss-partial-import</h2>
+       <ul>
+         <li part>Lets you set up modular .css files and import them all into one app.css file</li>
+         <li part>Who doesn't like modular CSS!</li>
+       </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>postcss-nested</h2>
+      <ul>
+        <li part>Unwraps nested rules how Sass would</li>
+        <li part>We only use this for pseudo classes and media queries</li>
+        <li part>You loose search options if you nest BEM classes like
+          <code-block>
+            .block {
+              &__element {
+                display: flex;
+              }
+            }</code>
+        </li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>postcss-custom-properties</h2>
+      <ul>
+        <li part>Variables in your CSS!</li>
+        <li part>We have a load.css file that has all our vars like
+          <code-block css>
+            :root {
+              --green: rgb(61, 154, 104);
+            }</code-block>
+          <code-block css>
+            color: var(--green);</code-block>
+        </li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>postcss-calc</h2>
+      <ul>
+        <li part>Reduces <code>calc()</code> references when possible</li>
+        <li part>Any calculations with variables are now possible
+          <code-block css>
+            :root {
+              --base-font-size: 16px;
+            }</code-block>
+          <code-block css>
+            font-size: calc(var(--main-font-size) * 2);</code-block>
+        </li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h1>Thanks!</h1>
+      <dl>
+        <dt>Twitter</dt>
+        <dd><a href="https://twitter.com/ctannerweb" target="_blank">@ctannerweb</a></dd>
+        <dt>Website</dt>
+        <dd><a href="https://dockyard.com/" target="_blank">dockyard.com</a></dd>
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/ctannerweb" target="_blank">github.com/ctannerweb</a></dd>
+        <dt>Slides</dt>
+        <dd><a href="https://github.com/ctannerweb/talks/narwin-pack" target="_blank">github.com/ctannerweb/talks/narwin-pack</a></dd>
+      </ul>
+    </a-slide>
+
+  </a-slide-deck>
+
+</body>
