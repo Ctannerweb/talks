@@ -1,5 +1,5 @@
 {
-  "name": "narwin-pack",
+  "name": "postcss-dev",
   "private": true,
   "dependencies": {
     "slide-deck": "philipwalton/slide-deck#0.3.0"
