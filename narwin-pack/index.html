@@ -47,16 +47,16 @@
         <li part>Take normal CSS and modifies it based on the rules in the plugin</li>
         <li part>You can write plugins yourself</li>
         <li part>Don't expect one plugin to solve every need</li>
-        <li part>The beauty with plugins is that there will always be new plugins that solve new problems</li>
+        <li part>The beauty with plugins is that the community is always making new plugins that solve new problems</li>
       </ul>
     </a-slide>
 
     <a-slide>
       <h2>PostCSS Packs</h2>
       <ul>
-        <li part>A collection of plugins that solve a bigger issue</li>
+        <li part>A collection of plugins that make up a prepackaged development process</li>
         <li part><a href="http://cssnext.io/" target="_blank">cssnext</a> allows you to use tomorrow's CSS syntax now</li>
-        <li part><a href="https://github.com/ctannerweb/talks/narwin-pack" target="_blank">narwin-pack</a> is a package with hand picked plugins that meet the needs of Dockyard's UX development process</li>
+        <li part><a href="https://github.com/ctannerweb/talks/narwin-pack" target="_blank">narwin-pack</a> is a package with hand picked plugins that meet the needs of DockYard's UX development process</li>
       </ul>
     </a-slide>
 
@@ -75,30 +75,68 @@
       <h2>autoprefixer</h2>
       <ul>
         <li part>Based on <a href="http://caniuse.com" target="_blank">caniuse</a> rules this plugin will auto add the needed prefix(es) of a style</li>
-        <li part>Very helpfull with transforms and transitions</li>
+        <li part>You can configure browser support</li>
+        <li part>Very helpful with transforms and transitions</li>
+        <li part>
+          <code-block>
+            .block {
+              display: flex;
+              transition: all .5s;
+            }
+          </code-block>
+          <code-block>
+            .block {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-transition: all .5s;
+              transition: all .5s;
+            }
+          </code-block>
+        </li>
       </ul>
     </a-slide>
 
     <a-slide>
-     <h2>postcss-partial-import</h2>
-       <ul>
-         <li part>Lets you set up modular CSS files and import them all into one app.css file</li>
-         <li part>Who doesn't like modular CSS!</li>
-       </ul>
+      <h2>postcss-partial-import</h2>
+      <ul>
+        <li part>Lets you set up modular CSS files and import them all into one app.css file</li>
+        <li part>When you combine modular CSS files into one file you only have one http request for CSS files</li>
+        <li part>Who doesn't like modular CSS!</li>
+        <li part>app.css
+          <code-block>
+            @import "type";
+            @import "load";
+            @import "modules/header";
+            @import "modules/footer";
+          </code-block>
+        </li>
+      </ul>
     </a-slide>
 
     <a-slide>
       <h2>postcss-nested</h2>
       <ul>
         <li part>Unwraps nested rules how Sass would</li>
-        <li part>We only use this for pseudo classes and media queries</li>
-        <li part>You loose search options if you nest BEM classes like
+        <li part>We only use this for pseudo elements/classes and media queries</li>
+        <li part>You lose search options if you nest BEM classes like
           <code-block>
             .block {
+              background-color: var(--green);
               &__element {
-                display: flex;
+                color: var(--green);
               }
-            }</code>
+            }
+          </code-block>
+          <code-block>
+            .block {
+              background-color: var(--green);
+            }
+            .block__element {
+              color: var(--green);
+            }
+          </code-block>
         </li>
       </ul>
     </a-slide>
@@ -111,9 +149,14 @@
           <code-block css>
             :root {
               --green: rgb(61, 154, 104);
-            }</code-block>
+            }
+          </code-block>
           <code-block css>
-            color: var(--green);</code-block>
+            color: var(--green);
+          </code-block>
+          <code-block css>
+            color: rgb(61, 154, 104);
+          </code-block>
         </li>
       </ul>
     </a-slide>
@@ -125,10 +168,24 @@
         <li part>Any calculations with variables are now possible
           <code-block css>
             :root {
-              --base-font-size: 16px;
-            }</code-block>
+              --w-l-wrap: 980px;
+            }
+          </code-block>
           <code-block css>
-            font-size: calc(var(--main-font-size) * 2);</code-block>
+            width: calc(var(--w-l-wrap) / 2);
+          </code-block>
+        </li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>Useful Links</h2>
+      <ul>
+        <li>
+          <a href="http://webdesign.tutsplus.com/tutorials/postcss-deep-dive-what-you-need-to-know--cms-24535" target="_blank">PostCSS Deep Dive: What You Need to Know</a>
+        </li>
+        <li>
+          <a href="http://autoprefixer.github.io/" target="_blank">Autoprefixer CSS online</a>
         </li>
       </ul>
     </a-slide>
