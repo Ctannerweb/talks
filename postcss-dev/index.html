@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Building your own development process with PostCSS (April 28, 2016)</title>
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="bower_components/slide-deck/a-slide-deck.html">
+  <link rel="import" href="bower_components/slide-deck/a-slide.html">
+  <link rel="import" href="bower_components/slide-deck/code-block.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <a-slide-deck>
+
+    <a-slide>
+      <h1>Building your own development process with PostCSS</h1>
+      <h4>Cory Tanner</h4>
+      <p><a href="https://twitter.com/Ctannerweb" target="_blank">@ctannerweb</a></p>
+    </a-slide>
+
+    <a-slide class="center">
+      <h1>UX Developer</h1>
+      <a href="https://dockyard.com/" target="_blank" class="t-link--dockyard">
+        <img width="30%" alt="DockYard logo" src="images/DY_logo_long.png" >
+      </a>
+    </a-slide>
+
+    <a-slide class="sub-section">
+      <h1>Before we dive in</h1>
+    </a-slide>
+
+    <a-slide>
+      <blockquote><b>Development Process:</b> <br>A combination of tools and guidelines that provide direction for achieving a higher standard of work.</blockquote>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">But What Makes A Development Process Important?</h2>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">Big Picture</h2>
+      <ul>
+        <li>Development tools and guidelines for CSS provide an environment to develop maintainable CSS</li>
+        <li>Teams work in harmony when using the same tools and techniques</li>
+      </ul>
+    </a-slide>
+
+    <a-slide class="section-slide">
+      <h2 class="heading">Sections</h2>
+      <p class="is-active">Using PostCSS in a Development Process</p>
+      <p>Implementing guidelines &amp; standards</p>
+    </a-slide>
+
+    <a-slide class="sub-section">
+      <h1>Defining PostCSS</h1>
+    </a-slide>
+
+    <a-slide>
+      <blockquote><b>PostCSS:</b> <br>A CSS processor that can extend or report on CSS at a number of different points in your workflow</blockquote>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">PostCSS</h2>
+      <ul>
+        <li>A responsive community</li>
+        <li>Can do the same thing as Sass/SCSS/Less</li>
+        <img part height="80%" alt="More space" src="images/space.jpg">
+      </ul>
+    </a-slide>
+
+    <a-slide class="center">
+      <a href="https://github.com/jonathantneal/precss" target="_blank">
+        <img width="100%" alt="PreCSS" src="images/precss.png">
+      </a>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">PostCSS is a CSS Processor</h2>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">PostCSS is a CSS Processor</h2>
+      <ul>
+        <li>Extend or report on CSS at a number of different points in your workflow</li>
+      </ul>
+    </a-slide>
+
+    <a-slide class="center">
+      <h1>PostCSS = Sandwich</h1>
+    </a-slide>
+
+    <a-slide class="center">
+      <img height="100%" alt="Say What Now" src="images/say_what.jpg">
+    </a-slide>
+
+    <a-slide class="center">
+      <img width="60%" alt="PostCSS sandwich" src="images/sandwich.jpg">
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">It's Here For The Long Haul</h2>
+    </a-slide>
+
+    <a-slide class="sub-section">
+      <h1>Plugins</h1>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">What They Do</h2>
+      <ul>
+        <li>Modify CSS based on rules from the plugin</li>
+        <li>Don't expect one plugin to solve every problem</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">Create Plugins</h2>
+      <ul>
+        <li>Written in JavaScript as a node module</li>
+        <li><a href="http://webdesign.tutsplus.com/tutorials/postcss-deep-dive-create-your-own-plugin--cms-24605" target="_blank">PostCSS Deep Dive: Create Your Own Plugin</a></li>
+      </ul>
+    </a-slide>
+
+    <a-slide class="center">
+      <a href="https://github.com/postcss/postcss-plugin-boilerplate" target="_blank">
+        <img width="100%" alt="Plugin boilerplate" src="images/boilerplate.png">
+      </a>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">New Plugins</h2>
+      <ul>
+        <li>Follow <a href="https://twitter.com/PostCSS" target="_blank">@PostCSS</a> on twitter</li>
+        <li>Explore <a href="http://postcss.parts/" target="_blank">PostCSS.parts</a> for anything that can help a development process</li>
+      </ul>
+    </a-slide>
+
+    <a-slide class="sub-section">
+      <h1 class="heading">PostCSS Packs</h1>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">PostCSS Packs</h2>
+      <ul>
+        <li>Collection of plugins that are prepackaged</li>
+        <li><a href="http://cssnext.io/" target="_blank">cssnext</a> allows you to use tomorrow's CSS syntax now</li>
+        <li><a href="https://github.com/ctannerweb/talks/narwin-pack" target="_blank">narwin-pack</a> is a package with hand picked plugins that meet the needs of DockYard's UX development process</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">narwin-pack Plugins</h2>
+      <a href="https://github.com/DockYard/narwin-pack" target="_blank" class="t-link--dockyard">
+        <img width="100" height="100" alt="DockYard logo" src="images/DY_logo.png" >
+      </a>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">narwin-pack Plugins</h2>
+      <ul>
+        <li>postcss-partial-import</li>
+        <li>postcss-custom-properties</li>
+        <li>postcss-nested</li>
+        <li>autoprefixer</li>
+        <li>postcss-calc</li>
+        <li>postcss-svg-fragments</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">postcss-partial-import</h2>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-partial-import (Guidelines)</h2>
+      <ul>
+        <li>Set up modular CSS files and import them into one CSS file</li>
+        <li>Only have one HTTP request for multiple CSS files</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-partial-import (In Use)</h2>
+      <p>Modular CSS file structure:</p>
+      <code-block>
+        styles/
+            modules/
+                header.css
+                footer.css
+                nav.css
+            base.css
+            load.css
+            layout.css
+            type.css
+      </code-block>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-partial-import (In Use)</h2>
+      <img width="80%" alt="Import CSS" src="images/import.jpg">
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">postcss-custom-properties</h2>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-custom-properties (Guidelines)</h2>
+      <ul>
+        <li>Variables in CSS!</li>
+        <li>Naming conventions help organize variables</li>
+        <li>Use <code>:root {}</code> to make variables global</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-custom-properties (In Use)</h2>
+      <p>Organized variables:</p>
+      <code-block css>
+        :root {
+          /* COLORS */
+          --white: #FFFFFF;
+          --green: rgb(61, 154, 104);
+            --75-green: rgba(61, 154, 104, .75);
+
+          /* FONT WEIGHTS */
+          --light: 200;
+          --bold: 600;
+        }
+      </code-block>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-custom-properties (In Use)</h2>
+      <p>Input:</p>
+      <code-block css>
+        :root {
+          --green: rgb(61, 154, 104);
+        }
+      </code-block>
+      <code-block css>
+        color: var(--green);
+      </code-block>
+      <p>Output:</p>
+      <code-block css>
+        color: rgb(61, 154, 104);
+      </code-block>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">autoprefixer</h2>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">autoprefixer</h2>
+      <ul>
+        <li>Based on the <a href="http://caniuse.com" target="_blank">caniuse</a> prefix database this plugin adds the needed prefix(es) of a style</li>
+        <li>Configure browser support</li>
+        <li>Simplifying development CSS</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">autoprefixer</h2>
+      <p>Input:</p>
+      <code-block>
+        .block {
+          display: flex;
+        }
+      </code-block>
+      <p>Output:</p>
+      <code-block>
+        .block {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+        }
+      </code-block>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">postcss-nested</h2>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-nested (Guidelines)</h2>
+      <ul>
+        <li>Unwraps nested styles how Sass would</li>
+        <li>We use this for pseudo elements/classes and media queries</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-nested (In Use)</h2>
+      <p>Unsearchable CSS:</p>
+      <code-block>
+        .block {
+          background-color: var(--green);
+          &__element {
+            color: var(--green);
+          }
+        }
+      </code-block>
+      <p>Searchable CSS:</p>
+      <code-block>
+        .block {
+          background-color: var(--green);
+        }
+        .block__element {
+          color: var(--green);
+        }
+      </code-block>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-nested (In Use)</h2>
+      <p>Good CSS Nesting:</p>
+      <code-block>
+        .nav__link {
+          color: var(--white);
+          .is-active &,
+          &:hover {
+            color: var(--75-white);
+          }
+          @media (min-width: 600px) {
+            display: inline-block;
+          }
+        }
+      </code-block>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">postcss-calc</h2>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-calc (Guidelines)</h2>
+      <ul>
+        <li>Reduces <code>calc()</code> references when possible</li>
+        <li>Variables in calculations</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-calc (In Use)</h2>
+      <p>Input:</p>
+      <code-block>
+        :root {
+          --font-size: 18px;
+        }
+      </code-block>
+      <code-block>
+        font-size: calc(var(--font-size) * 2);
+      </code-block>
+      <p>Output:</p>
+      <code-block>
+        font-size: 36px;
+      </code-block>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading">postcss-svg-fragments</h2>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-svg-fragments (Guidelines)</h2>
+      <ul>
+        <li>Use <a href="https://css-tricks.com/svg-fragment-identifiers-work/" target="blank">SVG fragments</a> in CSS</li>
+        <li>Keep SVG files organized in one SVG file</li>
+        <li>Can apply fills and strokes to a SVG background-image</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">postcss-svg-fragments (In Use)</h2>
+      <ul>
+        <p>Input:</p>
+        <code-block>
+          .background-patter {
+            background-image: url(defs.svg#pattern);
+            fill: blue;
+            stroke: black;
+          }
+        </code-block>
+        <p>Output:</p>
+        <code-block>
+          .background-patter {
+            background-image: url(/* SVG data */);
+            fill: blue;
+            stroke: black;
+          }
+        </code-block>
+      </ul>
+    </a-slide>
+
+    <a-slide class="section-slide">
+      <h2>Sections</h2>
+      <p>Using PostCSS in a Development Process</p>
+      <p class="is-active">Implementing guidelines &amp; standards</p>
+    </a-slide>
+
+    <a-slide class="sub-section">
+      <h1>Guidelines</h1>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">Set Guidelines</h2>
+      <ul>
+        <li>Make guidelines easy to access and change</li>
+        <p part>GitHub</p>
+        <p part>Google Docs</p>
+        <p part><a href="https://usecanvas.com" target="__blank">usecanvas</a></p>
+      </ul>
+    </a-slide>
+
+    <a-slide class="center">
+      <img width="100%" alt="Styleguides" src="images/styleguides.png">
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">Guideline Examples</h2>
+      <ul>
+        <li>CSS order of declarations</li>
+        <li>Implement ideas from <a href="https://smacss.com/book/type-state" target="_blank">SMACSS</a> and <a href="https://en.bem.info/" target="_blank">BEM</a></li>
+        <li>DRY</li>
+        <li><a  href="http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/" target="_blank">High Performance Animations</a></li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">Guideline (In Use)</h2>
+      <p>Order of declarations example:</p>
+      <code-block css>
+        .block {
+          /* POSITIONING */
+            position: absolute;
+            bottom: 0;
+
+          /* BOX-MODEL */
+            width: 500px;
+
+          /* TYPOGRAPHY */
+            font-size: 18px;
+            color: var(--green);
+
+          /* VISUAL */
+            background-color: var(--green);
+
+          /* MISC */
+            opacity: 1;
+        }
+      </code-block>
+    </a-slide>
+
+    <a-slide>
+      <blockquote>Try to construct systems that allow people of all abilities to spend more time designing / building and less time debugging/fighting/crying.
+        </br>- Adam Morse <a href="https://twitter.com/mrmrs_" target="_blank">@mrmrs_</a>
+      </blockquote>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">Production Code</h2>
+      <ul>
+        <li>How does this affect production CSS?</li>
+        <li>How are our end users affected?</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>The little things add up to make a big difference in the quality of your CSS and the performance of your website.</h2>
+    </a-slide>
+
+    <a-slide class="sub-section">
+      <h1>Code Review</h2>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">Setup a Review Process</h2>
+      <ul>
+        <li>Review everything</li>
+        <li>There are few downsides to code review</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">Setup a Review Process</h2>
+      <ul>
+        <li>Keeps code clean</li>
+        <li>Developers learn from each other</li>
+        <img width="50%" alt="Everyone is watching" src="images/watching_me.png">
+      </ul>
+    </a-slide>
+
+    <a-slide class="section-slide">
+      <h2>Sections</h2>
+      <p>Using PostCSS in a Development Process</p>
+      <p>Implementing guidelines &amp; standards</p>
+      <p class="is-active">Takeaways</p>
+    </a-slide>
+
+    <a-slide>
+      <h2 class="heading__left">Takeaways</h2>
+      <ul>
+        <li>Development tools alongside CSS guidelines can provide needed structure to develop great CSS</li>
+        <li>Teams that develop CSS work in harmony when using the same tools and techniques</li>
+      </ul>
+    </a-slide>
+
+    <a-slide>
+      <h2>Useful Links</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/postcss/postcss" target="_blank">PostCSS</a>
+        </li>
+        <li>
+          <a href="http://davidtheclark.com/its-time-for-everyone-to-learn-about-postcss/" target="_blank">It's Time for Everyone to Learn About PostCSS</a>
+        </li>
+        <li>
+          <a href="http://webdesign.tutsplus.com/tutorials/postcss-deep-dive-what-you-need-to-know--cms-24535" target="_blank">PostCSS Deep Dive: What You Need to Know</a>
+        </li>
+        <li>
+          <a href="http://autoprefixer.github.io/" target="_blank">Autoprefixer CSS online</a>
+        </li>
+        <li>
+          <a href="https://github.com/DockYard/styleguides/tree/master/ux-dev" target="_blank">DockYard UXD styleguides</a>
+        </li>
+        <li>
+          <a href="https://github.com/DockYard/narwin-pack" target="_blank">narwin-pack</a>
+        </li>
+      </ul>
+    </a-slide>
+
+    <a-slide class="center">
+      <h1>Slides</h1>
+      <p><a href="http://ctannerweb.github.io/talks/postcss-dev/" target="_blank">ctannerweb.github.io/talks/postcss-dev/</a></p>
+    </a-slide>
+
+    <a-slide class="center">
+      <h1>DockYard Is Hiring!</h1>
+      <h4>Come talk to me <span class="small">(I have stickers)</span> or visit our website.</h4>
+      <a href="https://dockyard.com/contact/join-us" target="_blank">dockyard.com/contact/join-us</a>
+    </a-slide>
+
+    <a-slide>
+      <h1>Thanks!</h1>
+      <dl>
+        <dt>Twitter</dt>
+        <dd><a href="https://twitter.com/ctannerweb" target="_blank">@Ctannerweb</a></dd>
+        <dt>Website</dt>
+        <dd><a href="https://dockyard.com/" target="_blank">dockyard.com</a></dd>
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/ctannerweb" target="_blank">Ctannerweb</a></dd>
+        <dt>Slides</dt>
+        <dd><a href="http://ctannerweb.github.io/talks/process-dev/" target="_blank">ctannerweb.github.io/talks/process-dev</a></dd>
+      </dl>
+    </a-slide>
+  </a-slide-deck>
+</body>
