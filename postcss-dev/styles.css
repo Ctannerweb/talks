@@ -11,21 +11,34 @@ a {
   color: rgb(61, 154, 104);
   text-decoration: none;
 }
+a:focus,
+a:hover {
+  color: rgba(61, 154, 104, .8);
+}
 
 h1,
 h2 {
   font-weight: 700;
   letter-spacing: -.01em;
-  line-height: 1;
 }
 h1 {
-  font-size: 3.33em;
-  margin: 0 0 calc(1em / 3.33);
-}
-
-h2 {
   font-size: 2.5em;
   margin: 0 0 calc(1em / 2.5);
+}
+h2 {
+  line-height: 1.5;
+}
+
+.heading {
+  font-size: 2em;
+}
+.heading__left {
+  margin: 0 0 1em;
+  text-align: left;
+  color: rgba(61, 154, 104, .9);
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -37,7 +50,7 @@ h3 {
 }
 
 hgroup h1 {
-  margin-bottom: calc(.3em / 3.5);
+  margin-bottom: calc(.3em / 2.5);
 }
 
 hgroup h2,
@@ -45,6 +58,7 @@ hgroup h3 {
   font-size: 1.75em;
   font-weight: 400;
   margin: 0 0 calc(1em / 1.75);
+  opacity: .8;
 }
 
 p {
@@ -62,20 +76,28 @@ li {
 code {
   background: hsl(0,0%,95%);
   border-radius: .2em;
-  color: #008080;
+  color: rgb(61, 154, 104);
   display: inline-block;
   font: .85em Menlo, Monaco, monospace;
   padding: .1em .2em 0em;
 }
 
+code-block {
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
 blockquote {
-  background: #eee;
-  border-left: .15em solid #ccc;
-  color: #555;
-  font-size: .9em;
-  font-style: italic;
   margin: 0 0 1em;
   padding: 1em;
+  border-left: .15em solid rgb(61, 154, 104);
+  border-radius: .075em;
+  background: #f7f7f7;
+  color: #555;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.8;
+  letter-spacing: 1px;
 }
 
 button {
@@ -107,6 +129,12 @@ tt {
   font-family: Menlo, Monaco, monospace;
 }
 
+.t-link--dockyard:focus,
+.t-link--dockyard:hover {
+  opacity: .8;
+}
+
+
 .big {
   font-size: 1.5em;
   letter-spacing: -0.04em;
@@ -115,8 +143,26 @@ tt {
 
 .small {
   font-size: 0.8em;
+  opacity: .6;
 }
 
 .center {
   text-align: center;
+}
+
+.section-slide,
+.sub-section {
+  box-sizing: border-box;
+  text-align: center;
+}
+.section-slide {
+  border: 4px solid rgb(61, 154, 104);
+}
+.sub-section h1 {
+  display: inline-block;
+  border-bottom: 4px solid rgba(61, 154, 104, .8);
+}
+
+.section-slide p.is-active {
+  color: rgb(61, 154, 104);
 }
