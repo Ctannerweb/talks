@@ -8,4 +8,4 @@ bower install
 python -m SimpleHTTPServer
 ```
 
-Now you can go to [localhost:8000/narwin-pack](http://localhost:8000/narwin-pack) and see the slides.
+Now you can go to [localhost:8000/narwin-pack](http://localhost:8000/talks/) and see the slides.
